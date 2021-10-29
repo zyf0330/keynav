@@ -262,7 +262,7 @@ int parse_keycode(char *keyseq) {
   int keysym = 0;
 
   strptr = dup = strdup(keyseq);
-  //printf("finding keycode for %s\n", keyseq);
+  // printf("finding keycode for %s\n", keyseq);
   while ((tok = strtok_r(strptr, "+", &tokctx)) != NULL) {
     last_tok = tok;
     strptr = NULL;
@@ -494,7 +494,7 @@ void defaults() {
   int i;
   char *default_config[] = {
     "clear",
-    "ctrl+semicolon start",
+    // "ctrl+semicolon start",
     "Escape end",
     "ctrl+bracketleft end", /* for vi people who use ^[ */
     "q record ~/.keynav_macros",
