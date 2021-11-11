@@ -24,17 +24,17 @@
 # Use 'daemonize' to background ourselves.
 #daemonize
 
-ctrl+quotedbl start
+# ctrl+quotedbl start,cursorzoom 400 400
 Escape end
 ctrl+bracketleft end
-h cut-left
-j cut-down
-k cut-up
-l cut-right
-y cut-left,cut-up
-u cut-right,cut-up
-b cut-left,cut-down
-n cut-right,cut-down
+# h cut-left
+# j cut-down
+# k cut-up
+# l cut-right
+# y cut-left,cut-up
+# u cut-right,cut-up
+# b cut-left,cut-down
+# n cut-right,cut-down
 ctrl+h move-left
 ctrl+j move-down
 ctrl+k move-up
@@ -48,6 +48,7 @@ semicolon warp
 1 warp,click 1
 2 warp,click 1,click 2
 3 warp,click 3
+ctrl+1 warp, sh "xdotool keydown Control_L click 1 keyup Control_L"
 
 u click 4
 d click 5
@@ -133,13 +134,14 @@ a history-back
 #Next cell-select 2x3   # PageDown
 
 ### Example using a 3x3 grid with nethack-vi keys
-#ctrl+semicolon start, grid 3x3
-#h cell-select 1x2      # left
-#j cell-select 2x3      # down
-#k cell-select 2x1      # up
-#l cell-select 3x2      # right
-#y cell-select 1x1      # up-left
-#u cell-select 3x1      # up-right
-#b cell-select 1x3      # down-left
-#n cell-select 3x3      # down-right
-#period cell-select 2x2 # center
+
+ctrl+quotedbl start, grid 3x3
+h cell-select 1x2      # left
+m cell-select 2x3      # down
+u cell-select 2x1      # up
+k cell-select 3x2      # right
+y cell-select 1x1      # up-left
+i cell-select 3x1      # up-right
+n cell-select 1x3      # down-left
+comma cell-select 3x3      # down-right
+j cell-select 2x2      # center
